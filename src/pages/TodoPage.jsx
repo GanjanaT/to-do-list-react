@@ -1,15 +1,24 @@
-import React from 'react'
-import ToDoInput from '../components/ToDoInput'
+import React from "react";
+import "../pages/todo-page.css";
+import ToDoInput from "../components/ToDoInput";
+import ToDo from "../components/ToDo";
+import deleteIcon from "../assets/bin.png";
 
 function ToDoPage() {
   return (
     <>
-      <main className='container'>
-        <h1>{"ganajnas"} To do list</h1>
+      <h1>Do it.</h1>
+      <section className="container list-styling">
+        <h2>{"Ganajnas"} to do list</h2>
         <ToDoInput></ToDoInput>
-      </main>
+        <div className="list-item-container">
+          <ul className="todo-list">
+            <ToDo></ToDo>
+          </ul>
+        </div>
+      </section>
     </>
-  )
+  );
 }
 
-export default ToDoPage
+export default ToDoPage;

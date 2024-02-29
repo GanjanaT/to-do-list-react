@@ -1,13 +1,21 @@
-import React, { useState } from "react";
-import NameInput from "../components/NameInput";
+import React from "react";
+import "../pages/welcome-page.css";
 
 function WelcomePage() {
   return (
     <>
-      <main className="container">
-        <h1>To do list</h1>
-        <NameInput></NameInput>
-      </main>
+    <h1>Do it.</h1>
+      <section className="container name-container">
+        <h2>Start your journey here</h2>
+        <form className="name-form">
+          <label htmlFor="name">
+            <input type="text" name="name" id="name" placeholder="Enter your name" />
+          </label>
+          <button className="style-btn" type="submit">
+            Create list
+          </button>
+        </form>
+      </section>
     </>
   );
 }

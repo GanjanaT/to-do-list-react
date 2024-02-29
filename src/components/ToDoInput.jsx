@@ -3,14 +3,20 @@ import React from "react";
 function ToDoInput() {
   return (
     <>
-      <section>
-        <form>
-          <label htmlFor="">
-            <input type="text" placeholder="Lägg till nått" />
+      {/* <div className="add-container"> */}
+        <div className="input-container">
+          <label htmlFor="todo-input">
+            <input
+              className="todo-input"
+              type="text"
+              name="todo-input"
+              id="todo-input"
+              placeholder="to do.."
+            />
           </label>
-          <button>Lägg till</button>
-        </form>
-      </section>
+          <button className="style-btn">Add</button>
+        </div>
+      {/* </div> */}
     </>
   );
 }

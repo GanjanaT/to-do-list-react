@@ -1,0 +1,13 @@
+.name-form {
+    width: 100%;
+    max-width: 595px;
+    display: flex;
+    flex-flow: column wrap;
+    gap: 5px;
+}
+
+.name-container {
+    max-width: 595px;
+    width: 100%;
+    gap: 50px;
+}
