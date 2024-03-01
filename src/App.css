@@ -1,4 +1,4 @@
-/* Aside Navbar */
+/* ----Aside Navbar---- */
 
 aside {
     padding: 50px 20px;
@@ -12,7 +12,6 @@ aside {
     gap: 50px;
     flex-direction: column;
     background-image: linear-gradient(to right, rgb(185, 155, 235, 0.9) , rgb(233, 208, 214, 0.9));
-    /* background-color: rgba(225, 210, 210, 0.9); */
     box-shadow:4px 7px 10px rgba(0,0,0,.4);
     overflow:hidden;
     transition:width .3s ease;
@@ -52,7 +51,7 @@ aside ul li .link {
     }
 }
 
-/* Change theme section */
+/* ----Change theme section---- */
   
 .theme-container {
     margin-top: 60px;
@@ -92,13 +91,13 @@ aside ul li .link {
     }
 }
 
-/* shared styling */
+/* ----Pages shared styling---- */
 
 h1 {
     /* position: fixed;
     top: 10vh; */
     text-align: center;
-    margin: 200px 0px 0px 95px;
+    margin: 100px 0px 0px 95px;
     font-size: 4rem;
     text-transform: uppercase;
     color: white;

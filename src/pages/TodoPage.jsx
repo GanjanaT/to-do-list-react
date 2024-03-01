@@ -17,7 +17,9 @@ function ToDoPage() {
       <ToDoInput setToDoList={setToDoList}></ToDoInput>
         <div className="list-item-container">
           <ul className="todo-list">
-            <ToDo></ToDo>
+          {toDoList.map((todo) => (
+              <ToDo key={todo.id} todo={todo} setToDoList={setToDoList}></ToDo>
+            ))}
           </ul>
         </div>
       </section>
