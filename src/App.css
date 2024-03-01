@@ -151,3 +151,11 @@ input {
         color: rgb(109, 148, 96);
     }
 }
+
+.error {
+    height: 0;
+    text-align: center;
+    color: rgb(171, 4, 4);
+    position: relative;
+    top: -30px;
+  }
