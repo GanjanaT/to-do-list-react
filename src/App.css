@@ -141,6 +141,7 @@ input {
     width: 100%;
     min-height: 40px;
     font-size: 1rem;
+    text-align: center;
     border:2px outset white;
     border-radius: 5px;
     box-shadow:1px 3px 5px rgba(0,0,0,.6);
