@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import homeIcon from "../assets/home-icon.svg";
 import accountIcon from "../assets/account-icon.svg";
+import listIcon from "../assets/list-icon.png";
 import logo from '../assets/logo1.png'
 import ChangeBackground from "./ChangeBackground";
 
@@ -10,13 +11,19 @@ const data = [
     id: 1,
     name: "Home",
     link: "/",
-    img: homeIcon,
+    img: homeIcon
   },
   {
     id: 2,
     name: "Account",
-    link: "*",
-    img: accountIcon,
+    link: "/account",
+    img: accountIcon
+  },
+  {
+    id: 2,
+    name: "Lists",
+    link: "/list",
+    img: listIcon
   }
 ];
 

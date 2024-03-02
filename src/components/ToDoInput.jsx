@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import SubmitButton from "./SubmitButton";
 
 function ToDoInput({ setToDoList }) {
   const [toDo, setToDo] = useState("");
@@ -45,9 +46,7 @@ function ToDoInput({ setToDoList }) {
             placeholder="to do.."
           />
         </label>
-        <button type="submit" className="style-btn">
-          Add
-        </button>
+        <SubmitButton type={"submit"} className={"style-btn"} btnText={"Add"}></SubmitButton>
       </form>
     </>
   );

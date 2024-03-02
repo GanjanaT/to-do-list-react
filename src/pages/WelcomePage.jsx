@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "../pages/welcome-page.css";
 import { useNavigate } from "react-router-dom";
+import SubmitButton from "../components/SubmitButton";
 
 function WelcomePage() {
   const [userName, setUserName] = useState("");
@@ -46,9 +47,7 @@ function WelcomePage() {
               placeholder="Enter your name"
             />
           </label>
-          <button type="submit" className="style-btn" >
-            Create list
-          </button>
+          <SubmitButton type={"submit"} className={"style-btn"} btnText={"Create list"}></SubmitButton>
         </form>
       </section>
     </>
