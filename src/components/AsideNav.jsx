@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import homeIcon from "../assets/home-icon.svg";
 import accountIcon from "../assets/account-icon.svg";
 import logo from '../assets/logo1.png'
-import ChangeTheme from "../components/ChangeTheme";
+import ChangeBackground from "./ChangeBackground";
 
 const data = [
   {
@@ -15,7 +15,7 @@ const data = [
   {
     id: 2,
     name: "Account",
-    link: "/todo",
+    link: "*",
     img: accountIcon,
   }
 ];
@@ -32,7 +32,7 @@ function AsideNav() {
               <NavLink key={object.id} object={object}></NavLink>
             ))}
           </ul>
-          <ChangeTheme></ChangeTheme>
+          <ChangeBackground></ChangeBackground>
         </nav>
       </aside>
     </>

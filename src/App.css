@@ -42,7 +42,7 @@ aside ul {
 aside ul li .link {
     display: flex;
     align-items: center;
-    gap: 85px;
+    gap: 60px;
     font-size: 1.5rem;
     text-decoration: none;
     color: black;
@@ -53,16 +53,16 @@ aside ul li .link {
 
 /* ----Change theme section---- */
   
-.theme-container {
+.bg-container {
     margin-top: 60px;
 }
 
-.theme-icon-btn {
+.bg-icon-btn {
     margin-bottom: 40px;
     padding: 0;
     display: flex;
     align-items: center;
-    gap: 85px;
+    gap: 60px;
     background: none;
     border: none;
     font-size: 1.5rem;
@@ -72,21 +72,19 @@ aside ul li .link {
       }
 }
   
-.theme-btns-container {
+.bg-btns-container {
     width: 100%;
-    visibility: hidden;
-    /* display: flex; */
-    /* justify-content: space-between; */
 }
 
-.theme-btn {
+.bg-btn {
     margin-top: 20px;
     width: 240px;
     height: 50px;
     border-radius: 10px;
-    border: outset;
+    border: 2px outset rgb(163, 133, 138);
+    background-position:center;
     &:hover {
-        border: 2px outset rgb(163, 133, 138);
+        border: 3px solid rgb(249, 247, 247);
         cursor:pointer;
     }
 }
@@ -94,8 +92,6 @@ aside ul li .link {
 /* ----Pages shared styling---- */
 
 h1 {
-    /* position: fixed;
-    top: 10vh; */
     text-align: center;
     margin: 100px 0px 0px 95px;
     font-size: 4rem;
@@ -108,22 +104,20 @@ h1 {
 h2 {
     text-transform: capitalize;
     text-align: center;
-    color: rgb(81, 102, 74);
+    color: black;
+    /* color: rgb(81, 102, 74); */
 }
 
 .container {
     margin-top: 50px;
     margin-left: 95px;
     padding: 40px 20px;
-    /* position: fixed;
-    top: 30vh; */
     display: flex;
     flex-flow: column wrap;
     place-items: center;
     background-color: rgba(255, 255, 255, 60%);
     box-shadow:4px 7px 10px rgba(0,0,0,.6);
     border-radius: 5px;
-    /* border: 2px outset rgb(176, 176, 176); */
     border: 2px outset rgb(255, 255, 255);
 }
 
@@ -152,10 +146,23 @@ input {
     }
 }
 
+.date {
+    margin: 0px 0px 0px 95px;
+    position: absolute;
+    top: 40px;
+    right: 20px;
+    font-size: 1.5em;
+    text-align: end;
+    font-weight: bold;
+    color: white;
+    text-shadow:4px 7px 10px rgba(0,0,0,.4),
+    4px 7px 10px rgba(0,0,0,.4), 4px 7px 10px rgba(0,0,0,.4);
+}
+
 .error {
     height: 0;
     text-align: center;
     color: rgb(171, 4, 4);
     position: relative;
     top: -30px;
-  }
+}
