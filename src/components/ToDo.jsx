@@ -43,6 +43,7 @@ function ToDo({ todo, setToDoList }) {
 export default ToDo;
 
 // vart ska min todo use state ligga?
+// vart ska min delete ligga?
 
 // måste jag skicka in , checked: false i mitt objekt?
 // checked={todo.checked} ?

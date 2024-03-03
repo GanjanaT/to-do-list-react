@@ -9,7 +9,7 @@ function WelcomePage() {
   const navigate = useNavigate();
 
   function handleChange(e){
-    setUserName(prev => prev = (e.target.value))
+    setUserName(prev => prev = e.target.value)
     setFormError("")
   }
 
@@ -47,7 +47,7 @@ function WelcomePage() {
               placeholder="Enter your name"
             />
           </label>
-          <SubmitButton type={"submit"} className={"style-btn"} btnText={"Create list"}></SubmitButton>
+          <SubmitButton btnType={"submit"} className={"style-btn"} btnText={"Create list"}></SubmitButton>
         </form>
       </section>
     </>

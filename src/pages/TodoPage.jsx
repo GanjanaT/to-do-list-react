@@ -15,12 +15,12 @@ function ToDoPage() {
       <h1>Do it.</h1>
       <section className="container list-styling">
       <h2>{userName + "s"} to do list</h2>
-      <ToDoInput setToDoList={setToDoList}></ToDoInput>
+      <ToDoInput setToDoList={setToDoList} />
         <div className="list-item-container">
           {toDoList.length < 1 ? <p className="empty-list">You have no to do's</p> : 
           <ul className="todo-list">
           {toDoList.map((todo) => (
-              <ToDo key={todo.id} todo={todo} setToDoList={setToDoList}></ToDo>
+              <ToDo key={todo.id} todo={todo} setToDoList={setToDoList} />
             ))}
           </ul>}
         </div>

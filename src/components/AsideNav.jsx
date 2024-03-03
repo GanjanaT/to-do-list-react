@@ -20,7 +20,7 @@ const data = [
     img: accountIcon
   },
   {
-    id: 2,
+    id: 3,
     name: "Lists",
     link: "/list",
     img: listIcon

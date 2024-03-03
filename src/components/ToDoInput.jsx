@@ -46,7 +46,7 @@ function ToDoInput({ setToDoList }) {
             placeholder="to do.."
           />
         </label>
-        <SubmitButton type={"submit"} className={"style-btn"} btnText={"Add"}></SubmitButton>
+        <SubmitButton btnType={"submit"}  className={"style-btn"} btnText={"Add"}></SubmitButton>
       </form>
     </>
   );
