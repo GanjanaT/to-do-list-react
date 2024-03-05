@@ -8,26 +8,34 @@ function WelcomePage() {
   const [formError, setFormError] = useState("");
   const navigate = useNavigate();
 
-  function handleChange(e){
-    setUserName(prev => prev = e.target.value)
-    setFormError("")
+  const MAX_LENGHT_NAME = 30;
+
+  function handleChange(e) {
+    const userInput = e.target.value;
+    setUserName((prev) => (prev = userInput));
+    setFormError("");
   }
 
-  function validateForm(){
+  function validateForm() {
+    const MAX_LENGHT_NAME = 30;
     let error = "";
+
     if (userName === ""){
-     error = "Please enter name"
+      error = "Please enter name"
+    }
+    if (userName.length > MAX_LENGHT_NAME){
+      error = "Maximum of 30 characters"
     }
     return error;
   }
 
-  function handleSubmit(e){
+  function handleSubmit(e) {
     e.preventDefault();
 
     let error = validateForm();
     setFormError(error);
-    if (error === ""){
-      navigate("/todo", {state: {userName}})
+    if (error === "") {
+      navigate("/todo", { state: { userName } });
     }
   }
   return (
@@ -41,13 +49,12 @@ function WelcomePage() {
             <input
               type="text"
               name="name"
-              id="name"
               value={userName}
               onChange={handleChange}
               placeholder="Enter your name"
             />
           </label>
-          <SubmitButton btnType={"submit"} className={"style-btn"} btnText={"Create list"}></SubmitButton>
+          <SubmitButton btnText={"Create list"}/>
         </form>
       </section>
     </>

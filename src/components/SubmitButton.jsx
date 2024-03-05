@@ -1,9 +1,9 @@
 import React from 'react'
 
-function SubmitButton({btnType, className, btnText}) {
+function SubmitButton({btnText}) {
   return (
     <>
-        <button type={btnType} className={className} >
+        <button type="submit" className="style-btn" >
             {btnText}
         </button>
     </>

@@ -1,15 +1,9 @@
 import React from "react";
 
 function ToDo({ todo, setToDoList }) {
-  function toggleCompleated(id, checked) {
+  function toggleCompleated(checked, id) {
     setToDoList((prev) => {
-      return prev.map((todo) => {
-        if (todo.id === id) {
-          return { ...todo, checked };
-        }
-        return todo;
-        // prev.map(todo => todo.id === id ? {...todo, checked: true} : todo)
-      });
+      return prev.map((todo) => todo.id === id ? { ...todo, checked } : todo);
     });
   }
 
@@ -24,7 +18,7 @@ function ToDo({ todo, setToDoList }) {
           <input
             type="checkbox"
             name="todo"
-            onChange={(e) => toggleCompleated(todo.id, e.target.checked)}
+            onChange={(e) => toggleCompleated(e.target.checked, todo.id)}
           />
           {todo.title}
         </label>
@@ -41,13 +35,3 @@ function ToDo({ todo, setToDoList }) {
 }
 
 export default ToDo;
-
-// vart ska min todo use state ligga?
-// vart ska min delete ligga?
-
-// måste jag skicka in , checked: false i mitt objekt?
-// checked={todo.checked} ?
-// ska man ha id
-// samma value om man skriver två gånger?
-
-// är checkbox det här del av formuläret?

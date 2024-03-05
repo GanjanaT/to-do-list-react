@@ -3,50 +3,58 @@ import SubmitButton from "./SubmitButton";
 
 function ToDoInput({ setToDoList }) {
   const [toDo, setToDo] = useState("");
-  const [inputError, setInputError] = useState();
+  const [formErrors, setFormErrors] = useState("");
+  const MAX_INPUT_LENGHT = 60;
 
-  function validateInput() {
+  function validateForm() {
     let error = "";
     if (toDo === "") {
-      error = "Please enter a to do";
+      return error = "Please enter a to do";
+    }
+    if (toDo.length > MAX_INPUT_LENGHT){
+      return error = "Maximum 60 characters"
     }
     return error;
   }
 
   function handleChange(e) {
-    setToDo((prev) => (prev = e.target.value));
-    setInputError();
+    let toDoInput = e.target.value
+    setToDo((prev) => (prev = toDoInput));
+    setFormErrors("");
   }
 
   function handleSubmit(e) {
     e.preventDefault();
-    let error = validateInput();
-    setInputError(error);
+    let newToDo = {
+      id: Math.floor(Math.random() * 10000),
+      title: toDo,
+      checked: false,
+    };
+    let error = validateForm();
+    
+    setFormErrors(error);
+
     if (error === "") {
-      setToDoList((prev) => [
-        ...prev,
-        { id: Math.floor(Math.random() * 10000), title: toDo, checked: false },
-      ]);
+      setToDoList((prev) => [...prev, newToDo]);
       setToDo("");
     }
   }
 
   return (
     <>
-      {inputError && <p className="error error-position">{inputError}</p>}
+      {formErrors && <p className="error error-position">{formErrors}</p>}
       <form onSubmit={handleSubmit} className="input-container">
-        <label htmlFor="todo-input">
+        <label>
           <input
             className="todo-input"
             type="text"
             name="todo-input"
-            id="todo-input"
             value={toDo}
             onChange={handleChange}
-            placeholder="to do.."
+            placeholder="Enter a to do.."
           />
         </label>
-        <SubmitButton btnType={"submit"}  className={"style-btn"} btnText={"Add"}></SubmitButton>
+        <SubmitButton btnText={"Add"} />
       </form>
     </>
   );

@@ -4,6 +4,7 @@ import bgImgGreen from "../assets/bg-green.jpg";
 import bgImgColors from "../assets/bg-colors.jpg";
 import bgImgFlowers from "../assets/bg.jpg";
 
+
 const data = [
   {
     id: 1,
@@ -29,11 +30,10 @@ function ChangeBackground() {
 
   useEffect(()=> {
     document.body.style.backgroundImage = background;
-    console.log(background) 
   }, [background])
 
-  function changeBackground(image){
-    setBackground(prev => prev = image)
+  function changeBackground(image) {
+    setBackground((prev) => (prev = image));
   }
   
   return (
@@ -45,9 +45,14 @@ function ChangeBackground() {
         {toggleBackgroundBtns && (
         <div className="bg-btns-container">
           {backgroundBtns.map(btn => 
-            <div key={btn.id}>
-            <button onClick={() => changeBackground(btn.image)} className="bg-btn" type="button" style={{backgroundImage: btn.image}}>{btn.name}</button>
-            </div>  
+          <button key={btn.id}
+          onClick={() => changeBackground(btn.image)}
+          className="bg-btn"
+          type="button"
+          style={{ backgroundImage: btn.image }}
+        >
+          {btn.name}
+        </button>
           )}
         </div>)}
       </div>
@@ -56,3 +61,6 @@ function ChangeBackground() {
 }
 
 export default ChangeBackground;
+
+// bäst att göra. knapparna i egen komponent? och funktionen i den?
+// return en turnery uttryck ?
