@@ -11,3 +11,13 @@
     width: 100%;
     gap: 50px;
 }
+
+@media (max-width: 767px){
+    .name-container {
+        width: 70%;
+    }
+
+    .name-container input, .name-container button {
+        height: 50px;
+    }
+}

@@ -20,7 +20,7 @@ function ToDo({ todo, setToDoList }) {
             name="todo"
             onChange={(e) => toggleCompleated(e.target.checked, todo.id)}
           />
-          {todo.title}
+          <span>{todo.title}</span>
         </label>
         <button
           type="button"

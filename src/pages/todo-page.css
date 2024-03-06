@@ -1,6 +1,5 @@
 .list-styling {
-    margin-bottom: 10px;
-    margin-left: 95px;
+    margin-left: 90px;
     max-width: 595px;
     width: 100%;
     display: flex;
@@ -64,7 +63,8 @@
 .todo-list li, .empty-list {
     margin: 5px 0px;
     padding: 10px;
-    height: 50px;
+    width: 100%;
+    min-height: 50px;
     font-weight: bold;
     border: 2px outset white;
     border-radius: 5px;
@@ -89,7 +89,8 @@
 }
 
 .todo-list input {
-    width: 30px;
+    max-width: 32px;
+    height: 32px;
     cursor: pointer;
 }
 
@@ -100,12 +101,34 @@
 
 .delete-button {
     background: no-repeat center/cover url(/src/assets/bin.png);
-    width: 32px;
-    height: 32px;
+    min-width: 32px;
+    min-height: 32px;
     border: none;
     font-size: 0;
     cursor: pointer;
     &:hover {
         scale: 1.2;
+    }
+}
+
+@media (max-width: 767px){
+    .list-styling {
+        width: 70%;
+    }
+
+    .input-container {
+        display: block;
+    }
+
+    .input-container button {
+        margin-top: 5px;
+        width: 100%;
+        height: 50px;
+    }
+}
+
+@media (max-width: 375px){
+    .list-styling {
+        margin-top: 20px;
     }
 }

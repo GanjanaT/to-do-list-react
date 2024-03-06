@@ -8,7 +8,6 @@ function ToDoPage() {
   const location = useLocation();
   const { userName } = location.state;
   const [toDoList, setToDoList] = useState([]);
-  console.log(toDoList);
   
   return (
     <>

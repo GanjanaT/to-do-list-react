@@ -4,7 +4,7 @@ aside {
     padding: 50px 20px;
     width: 90px;
     min-height: 100vh;
-    position: absolute;
+    position: fixed;
     left: 0px;
     top: 0px;
     z-index: 100;
@@ -93,7 +93,7 @@ aside ul li .link {
 
 h1 {
     text-align: center;
-    margin: 100px 0px 0px 95px;
+    margin: 100px 0px 0px 90px;
     font-size: 4rem;
     text-transform: uppercase;
     color: white;
@@ -110,7 +110,7 @@ h2 {
 
 .container {
     margin-top: 50px;
-    margin-left: 95px;
+    margin-left: 90px;
     padding: 40px 20px;
     display: flex;
     flex-flow: column wrap;
@@ -147,7 +147,7 @@ input {
 }
 
 .date {
-    margin: 0px 0px 0px 95px;
+    margin: 0px 0px 0px 90px;
     position: absolute;
     top: 40px;
     right: 20px;
@@ -166,3 +166,4 @@ input {
     position: relative;
     top: -30px;
 }
+
