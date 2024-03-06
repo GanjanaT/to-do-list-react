@@ -4,15 +4,15 @@ import WelcomePage from "./pages/WelcomePage"
 import ToDoPage from "./pages/TodoPage";
 import NotFoundScreen from "./pages/NotFoundPage";
 import AsideNav from "./components/AsideNav";
-import ShowDate from "./components/ShowDate";
+import ShowCurrentDate from "./components/ShowCurrentDate";
 
 function App() {
   return (
       <BrowserRouter>
         <>
-        <AsideNav></AsideNav>
+        <AsideNav/>
         <main>
-          <ShowDate></ShowDate>
+          <ShowCurrentDate/>
         <Routes>
             <Route exact path='/' element={<WelcomePage/>} />
             <Route exact path='/todo' element={<ToDoPage/>} />

@@ -5,15 +5,13 @@ import SubmitButton from "../components/SubmitButton";
 
 function WelcomePage() {
   const [userName, setUserName] = useState("");
-  const [formError, setFormError] = useState("");
+  const [formErrors, setFormErrors] = useState("");
   const navigate = useNavigate();
-
-  const MAX_LENGHT_NAME = 30;
 
   function handleChange(e) {
     const userInput = e.target.value;
     setUserName((prev) => (prev = userInput));
-    setFormError("");
+    setFormErrors("");
   }
 
   function validateForm() {
@@ -33,7 +31,7 @@ function WelcomePage() {
     e.preventDefault();
 
     let error = validateForm();
-    setFormError(error);
+    setFormErrors(error);
     if (error === "") {
       navigate("/todo", { state: { userName } });
     }
@@ -44,7 +42,7 @@ function WelcomePage() {
       <section className="container name-container">
         <h2>Start your journey here</h2>
         <form onSubmit={handleSubmit} className="name-form">
-          {formError && <p className="error">{formError}</p>}
+          {formErrors && <p className="error">{formErrors}</p>}
           <label htmlFor="name">
             <input
               type="text"

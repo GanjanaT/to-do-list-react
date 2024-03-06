@@ -4,7 +4,7 @@ aside {
     padding: 50px 20px;
     width: 90px;
     min-height: 100vh;
-    position: fixed;
+    position: absolute;
     left: 0px;
     top: 0px;
     z-index: 100;

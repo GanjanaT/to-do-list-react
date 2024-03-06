@@ -4,10 +4,11 @@ import SubmitButton from "./SubmitButton";
 function ToDoInput({ setToDoList }) {
   const [toDo, setToDo] = useState("");
   const [formErrors, setFormErrors] = useState("");
-  const MAX_INPUT_LENGHT = 60;
 
   function validateForm() {
+    const MAX_INPUT_LENGHT = 60;
     let error = "";
+
     if (toDo === "") {
       return error = "Please enter a to do";
     }
