@@ -43,7 +43,7 @@ function WelcomePage() {
         <h2>Start your journey here</h2>
         <form onSubmit={handleSubmit} className="name-form">
           {formErrors && <p className="error">{formErrors}</p>}
-          <label htmlFor="name">
+          <label>
             <input
               type="text"
               name="name"
@@ -52,7 +52,7 @@ function WelcomePage() {
               placeholder="Enter your name"
             />
           </label>
-          <SubmitButton btnText={"Create list"}/>
+          <SubmitButton>Create list</SubmitButton>
         </form>
       </section>
     </>

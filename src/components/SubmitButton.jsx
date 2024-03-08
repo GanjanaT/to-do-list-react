@@ -1,10 +1,10 @@
 import React from 'react'
 
-function SubmitButton({btnText}) {
+function SubmitButton({children}) {
   return (
     <>
         <button type="submit" className="style-btn" >
-            {btnText}
+            {children}
         </button>
     </>
   )

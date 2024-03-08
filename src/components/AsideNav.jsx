@@ -10,13 +10,15 @@ const data = [
     id: 1,
     name: "Home",
     link: "/",
-    img: homeIcon
+    img: homeIcon,
+    alt: "Go to home icon"
   },
   {
     id: 2,
     name: "Account",
     link: "/account",
-    img: accountIcon
+    img: accountIcon,
+    alt: "Go to your account icon"
   }
 ];
 
@@ -46,7 +48,7 @@ function NavLink({ object }) {
     <>
       <li>
         <Link to={object.link} className="link">
-          <img src={object.img} alt={object.name} />
+          <img src={object.img} alt={object.alt} />
           {object.name}
         </Link>
       </li>

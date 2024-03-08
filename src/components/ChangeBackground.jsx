@@ -43,7 +43,7 @@ function ChangeBackground() {
           <img src={bgIcon} alt="background icon" />Background
         </button>
         {toggleBackgroundBtns && (
-        <div className="bg-btns-container">
+        <div>
           {backgroundBtns.map(btn => 
           <button key={btn.id}
           onClick={() => changeBackground(btn.image)}
