@@ -16,7 +16,7 @@ const data = [
   {
     id: 2,
     name: "Account",
-    link: "/account",
+    link: "*",
     img: accountIcon,
     alt: "Go to your account icon"
   }
