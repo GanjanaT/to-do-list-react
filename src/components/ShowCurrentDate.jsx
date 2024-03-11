@@ -10,7 +10,7 @@ function ShowCurrentDate() {
     }; 
   return (
     <>
-      <div className="date">{currentDate.toLocaleDateString('sv-SE', dateFormat).toUpperCase()}</div>
+      <div className="date">{currentDate.toLocaleDateString('en-EN', dateFormat).toUpperCase()}</div>
     </>
   );
 }
