@@ -61,6 +61,3 @@ function ChangeBackground() {
 }
 
 export default ChangeBackground;
-
-// bäst att göra. knapparna i egen komponent? och funktionen i den?
-// return en turnery uttryck ?

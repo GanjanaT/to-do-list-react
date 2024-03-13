@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "../pages/welcome-page.css";
 import { useNavigate } from "react-router-dom";
+import ShowCurrentDate from "../components/ShowCurrentDate";
 import SubmitButton from "../components/SubmitButton";
 
 function WelcomePage() {
@@ -18,11 +19,11 @@ function WelcomePage() {
     const MAX_LENGHT_NAME = 30;
     let error = "";
 
-    if (userName === ""){
-      error = "Please enter name"
+    if (userName === "") {
+      error = "Please enter name";
     }
-    if (userName.length > MAX_LENGHT_NAME){
-      error = "Maximum of 30 characters"
+    if (userName.length > MAX_LENGHT_NAME) {
+      error = "Maximum of 30 characters";
     }
     return error;
   }
@@ -38,23 +39,26 @@ function WelcomePage() {
   }
   return (
     <>
-      <h1>Do it.</h1>
-      <section className="container name-container">
-        <h2>Start your journey here</h2>
-        <form onSubmit={handleSubmit} className="name-form">
-          {formErrors && <p className="error">{formErrors}</p>}
-          <label>
-            <input
-              type="text"
-              name="name"
-              value={userName}
-              onChange={handleChange}
-              placeholder="Enter your name"
-            />
-          </label>
-          <SubmitButton>Create list</SubmitButton>
-        </form>
-      </section>
+      <main>
+        <ShowCurrentDate />
+        <h1>Do it.</h1>
+        <section className="container name-container">
+          <h2>Start your journey here</h2>
+          <form onSubmit={handleSubmit} className="name-form">
+            {formErrors && <p className="error">{formErrors}</p>}
+            <label>
+              <input
+                type="text"
+                name="name"
+                value={userName}
+                onChange={handleChange}
+                placeholder="Enter your name"
+              />
+            </label>
+            <SubmitButton>Create list</SubmitButton>
+          </form>
+        </section>
+      </main>
     </>
   );
 }
